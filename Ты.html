@@ -1,0 +1,456 @@
+<html i18n-values="dir:textdirection" dir="ltr" i18n-processed=""><head>
+  <meta charset="utf-8">
+  <title i18n-content="title">JOJO</title>
+  <link sizes="16x16" rel="icon" type="image/png" href="favicon.png">
+  <link sizes="32x32" rel="icon" type="image/png" href="favicon@2x.png">
+  <style>body {
+    font: .8em Arial,Helvetica,sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    color: #000;
+    background: #e1e1e1;
+}
+
+body,html[subframe] {
+    height: 100%
+}
+
+html[subframe] body {
+    background: #fff;
+}
+
+wbr {
+    display: inline-block
+}
+
+:link:hover,:visited:hover {
+    color: red!important
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 700px;
+    padding: 50px 0
+}
+
+.paper {
+    margin-top: 0;
+    padding: 32px 38px 36px;
+    background: #fff;
+    box-shadow: 0 10px 40px 10px rgba(0,0,0,.1)
+}
+
+html[subframe] .paper {
+    box-shadow: none;
+    padding: 22px 20px 20px
+}
+
+.paper .b-link:link,.paper .b-link:visited:hover {
+    color: inherit
+}
+
+.paper__inner {
+    position: relative
+}
+
+.paper__text-wrap {
+    position: relative;
+    padding-right: 60px
+}
+
+.
+    background-repeat: no-repeat;
+    background-position: 100% 0
+}
+
+.paper__title {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 23px
+}
+
+.paper__summary {
+    margin-bottom: 13px;
+    font-size: 15px;
+    line-height: 1.4
+}
+
+.paper__summary strong {
+    font-weight: 700
+}
+
+.paper__action {
+    margin-top: 30px
+}
+
+.paper__disclosure {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+}
+
+.paper__suggestions {
+    position: relative;
+    margin: 0 0 25px;
+    padding: 0;
+    font-size: 15px
+}
+
+.paper__suggestion {
+    display: block;
+    margin: 7px 0;
+    padding-left: 30px;
+    line-height: 1.3
+}
+
+.paper__suggestion:first-child {
+    margin-top: 0
+}
+
+.paper__suggestion:before {
+    position: absolute;
+    left: 0;
+    content: '—'
+}
+
+.error {
+    margin-top: 25px;
+    color: #b4b4b4;
+    font-size: 13px;
+    transition: 0.5s 0.4s;
+    -webkit-font-smoothing: antialiased
+}
+
+.error_hidden_yes {
+    display: none;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+@media all and (min-width:0) {
+    .button {
+        border: 0
+    }
+
+    a.button:link,a.button:visited {
+        outline: hidden;
+        text-decoration: none
+    }
+}
+
+@media all and (min-width:0) {
+    .button {
+        cursor: pointer
+    }
+}
+
+a.button:hover {
+    cursor: default;
+    outline: hidden;
+    text-decoration: none
+}
+
+.button__text {
+    position: relative;
+    padding: 0 1em
+}
+
+.button_disabled_yes {
+    opacity: .6
+}
+
+.button_disabled_yes,a.button_disabled_yes,a.button_disabled_yes .button__text {
+    cursor: default
+}
+
+@media all and (min-width:0) {
+    .button_pressed_yes .button__text {
+        top: 1px
+    }
+}
+
+@media all and (min-width:0) {
+    .button_theme_normal {
+        background: linear-gradient(to bottom,rgba(0,0,0,.2)0,rgba(0,0,0,.4)100%);
+        box-shadow: 0 1px 0 rgba(0,0,0,.07);
+        border-radius: 3px
+    }
+
+    .button_theme_normal:before {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        left: 1px;
+        top: 1px;
+        content: '';
+        background: linear-gradient(to bottom,#fff 0,#eee 100%);
+        border-radius: 2px
+    }
+
+    .button_focused_yes.button_theme_normal {
+        box-shadow: 0 1px 0 rgba(0,0,0,.07),0 0 6px 2px rgba(255,204,0,.7)
+    }
+
+    .button_focused_yes.button_theme_normal:not(.button_pressed_yes):before {
+        box-shadow: 0 0 0 1px rgba(193,154,0,.2)
+    }
+
+    .button_pressed_yes.button_theme_normal {
+        box-shadow: inset 0 2px 1px -1px rgba(0,0,0,.4),0 1px 0 rgba(255,255,255,.2)
+    }
+
+    .button_pressed_yes.button_theme_normal:before {
+        box-shadow: inset 0 1px 3px -1px rgba(0,0,0,.5)
+    }
+
+    .button_theme_normal {
+        color: #333!important
+    }
+}
+
+@media all and (min-width:0) {
+    .button_theme_normal.button_hovered_yes:before {
+        background: linear-gradient(to bottom,rgba(255,255,255,1)0,rgba(246,245,243,1)100%)
+    }
+}
+
+a.button_theme_normal.button_hovered_yes {
+    color: #333!important
+}
+
+.button_size_xs {
+    font-size: 13px;
+    line-height: 24px
+}
+
+.button_hidden_yes {
+    display: none;
+}
+
+@media all and (min-width:0) {
+    .button_theme_action {
+        background: linear-gradient(to bottom,rgba(96,64,0,.4)0%,rgba(70,47,0,.54)100%);
+        box-shadow: 0 1px 0 rgba(0,0,0,.07);
+        border-radius: 3px
+    }
+
+    .button_theme_action:before {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        left: 1px;
+        top: 1px;
+        content: '';
+        background: linear-gradient(to bottom,#ffdf60 0,#fc0 100%);
+        border-radius: 2px
+    }
+
+    .button_focused_yes.button_theme_action {
+        box-shadow: 0 1px 0 rgba(0,0,0,.07),0 0 6px 2px rgba(255,204,0,.7)
+    }
+
+    .button_focused_yes.button_theme_action:before {
+        box-shadow: 0 0 0 1px rgba(193,154,0,.2)
+    }
+
+    .button_pressed_yes.button_theme_action {
+        box-shadow: inset 0 2px 1px -1px rgba(0,0,0,.4),0 1px 0 rgba(255,255,255,.2)
+    }
+
+    .button_pressed_yes.button_theme_action:before {
+        box-shadow: inset 0 1px 3px -1px rgba(0,0,0,.5)
+    }
+
+    .button_theme_action {
+        color: #333!important
+    }
+}
+
+@media all and (min-width:0) {
+    .button_theme_action.button_hovered_yes:before {
+        background: linear-gradient(to bottom,rgba(255,230,129,1)0,rgba(255,212,40,1)100%)
+    }
+}
+
+a.button_theme_action.button_hovered_yes {
+    color: #333!important
+}
+
+.button_theme_action:focus
+{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07), 0 0 6px 2px rgba(255, 204, 0, 0.7);
+}
+
+.button_theme_action:focus:before
+{
+    box-shadow: 0 0 0 1px rgba(193,154,0,.2);
+}
+
+.button_theme_action:active
+{
+    box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button_theme_action:active:before
+{
+    box-shadow: inset 0 1px 3px -1px rgba(0,0,0,.5);
+}
+
+.button_theme_action:hover:before
+{
+    background: linear-gradient(to bottom, rgba(255,230,129,1) 0,rgba(255,212,40,1) 100%);
+}
+
+a.button_theme_action:hover
+{
+    color: #333 !important;
+}
+
+.button_size_m {
+    line-height: 32px;
+    font-size: 15px
+}
+
+.button_theme_pseudo,a.button_theme_pseudo:link,a.button_theme_pseudo:visited {
+    cursor: pointer;
+    color: #333!important
+}
+
+.button_theme_pseudo .button__text {
+    padding: 0 .78em
+}
+
+@media all and (min-width:0) {
+    .button_theme_pseudo {
+        line-height: 24px
+    }
+
+    .button_size_m.button_theme_pseudo {
+        line-height: 28px
+    }
+
+    .button_theme_pseudo .button__text {
+        top: 0
+    }
+
+    .button_theme_pseudo {
+        outline: hidden;
+        border-radius: 3px;
+        background: 0 0;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.2)
+    }
+
+    .button_hovered_yes.button_theme_pseudo {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.35)
+    }
+}
+
+a.button_theme_pseudo:hover {
+    cursor: pointer;
+    color: #333!important
+}
+
+@media all and (min-width:0) {
+    .button_focused_yes.button_theme_pseudo {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.2),0 0 6px 2px rgba(255,204,0,.7)
+    }
+
+    .button_focused_yes.button_hovered_yes.button_theme_pseudo {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.35),0 0 6px 2px rgba(255,204,0,.7)
+    }
+}
+
+.button_theme_pseudo:hover
+{
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.35);
+}
+
+.button_theme_pseudo:focus
+{
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 0 6px 2px rgba(255,204,0,.7);
+}
+
+.button_theme_pseudo:focus:hover
+{
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), 0 0 6px 2px rgba(255,204,0,.7);
+}
+
+[jscontent=failedUrl] {
+    display: inline-block;
+    display: -webkit-inline-box;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    max-height: 4.2em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+</style>
+  <script>// Copyright 2013 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// Decodes a UTF16 string that is encoded as base64.
+
+var toggleTimeout = null;
+var toggleHelpBox = showErrorBox;
+</script>
+</head>
+<body id="t" class="b-page" jstcache="0">
+  <div class="wrap" jstcache="0">
+    <div class="paper" jstcache="0">
+      <div class="paper__text-wrap" jstcache="0">
+        <div class="paper__title" jsselect="heading" jstcache="4">
+          <div class="paper__title-text" jsvalues=".innerHTML:msg" jstcache="10">Ты НАТУРАЛ</div>
+        </div>
+        <div class="paper__summary" jsselect="summary" jstcache="5">
+          <div class="paper__summary-text" jsvalues=".innerHTML:msg" jstcache="10">ЖОЖА СУПЕР ЖОЖА КАЛАСС <strong jscontent="hostName" jstcache="17">JOJO</strong>.</div>
+        </div>
+      </div>
+
+      <div id="suggestions-list" style="" jsdisplay="(suggestionsSummaryList &amp;&amp; suggestionsSummaryList.length)" jstcache="1">
+        <p jsvalues=".innerHTML:suggestionsSummaryListHeader" jstcache="6"></p>
+        <ul jsvalues=".className:suggestionsSummaryList.length == 1 ? 'single-suggestion' : ''" jstcache="7" class="single-suggestion">
+          <li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="11" jsinstance="*0"><a href="javascript:diagnoseErrors()" id="diagnose-link" jstcache="0">Ваш Стенд</a>.</li>
+        </ul>
+      </div>
+
+      <button class="button button_theme_action button_size_m" >
+        <a class="button__text" jscontent="msg" href="index.html" >Перезагрузить</a>
+      </button>
+      <div class="paper__action" jsdisplay="suggestionsDetails" jstcache="3">
+        <button class="button button_theme_pseudo button_size_xs" id="reveal-button" jsdisplay="details" onclick="showErrorBox()" jstcache="9">
+            <span class="button__text" jsvalues=".detailsText:details; .hideDetailsText:hideDetails;" jscontent="details" jstcache="12">Подробнее про ваш стенд</span>
+        </button>
+      </div>
+      <div class="paper__disclosure" id="disclosure" jsdisplay="suggestionsDetails" jstcache="3">
+        <ul class="paper__suggestions" jstcache="0">
+          <li class="paper__suggestion" jsselect="suggestionsDetails" jstcache="13" jsinstance="*0" style="display: none;">
+            <span class="paper__suggestion-text" jsvalues=".innerHTML:header" jstcache="15"></span>
+            <span class="paper__suggestion-text" jsvalues=".innerHTML:body" jstcache="16"></span>
+          </li>
+        </ul>
+        <div class="error error_hidden_yes" jstcache="0">
+          <span class="error__code" jscontent="errorCode" jstcache="14">ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</script><script jstcache="0">var tp = document.getElementById('t');jstProcess(loadTimeData.createJsEvalContext(), tp);</script></body></html>

@@ -1,0 +1,56 @@
+a {
+	padding-left: 35px;
+}
+body.glav {
+	background:url(img/Задний_план.png) no-repeat center center fixed;
+	background-size: 100%
+}
+h1 {
+	font-size: 14px;
+	width:900px;
+	color: #808080;
+}
+body.galer {
+	background:url(img/Галерея_задний.jpg) no-repeat center center fixed;
+	background-size: 100%
+}
+#slider	{
+	width: 1200px;
+	height: 200px;
+	border: 5px solid #800080;
+	margin: 50px auto;
+	overflow: hidden;
+}
+#polosa {
+	
+	width: 3300px;
+	position:  relative;
+	left: 0;
+	transition: all ease 1s; 
+}
+#polosa img {
+float: left;
+}
+#polosa::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+#left_ {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px;
+  width: 80%;
+  max-width: 200px;
+margin-left: 47%;
+  border-radius: 8px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
