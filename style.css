@@ -4,13 +4,17 @@ a {
 }
 body.glav {
 	background:url(img/Задний_план.png) no-repeat center center fixed;
+	width: 1200px;
+	height: 200px;
 
-	width: 100%;
-max-width: 1280px;
 margin: 0 auto;
 
 }
+head {
+	background: url();
+}
 h1 {
+	
 	font-size: 14px;
 	width:900px;
 	color: #808080;
